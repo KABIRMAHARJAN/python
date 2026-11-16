@@ -20,14 +20,22 @@ while True:
         if len(students)==0:
             print("No records found!!")
         else:
-            print(students)
+            for student in students:
+                print(student)
     elif n==3:
         r=input("Enter roll no of student: ")
+        c=0
         for x in students:
-            if r == "Roll no" in x:
-                print (students)
-            else:
-                print("Student not found!!")
+            if x["Roll no"]== r:
+                print("Student found!!!")
+                c+=1
+                print(x)
+                break
+
+        if c==0:
+            print("Not found!!")
     elif n==4:
         print("Exiting!!")
         break
+    else:
+        print("Invalid choice!!!")
