@@ -1,4 +1,4 @@
-sentence="python is easy and python is powerful"
+sentence=input("Enter a sentence: ")
 word= sentence.split()
 frequency={}
 
